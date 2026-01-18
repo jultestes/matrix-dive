@@ -1,4 +1,5 @@
 import { Zap, Check, Star, Terminal } from 'lucide-react';
+import MatrixRain from '@/components/MatrixRain';
 
 const plans = [
   {
@@ -48,7 +49,9 @@ const plans = [
 
 const Index = () => {
   return (
-    <div className="scanline min-h-screen px-4 py-12 md:py-20">
+    <>
+      <MatrixRain />
+      <div className="scanline min-h-screen px-4 py-12 md:py-20">
       {/* Header */}
       <div className="mx-auto max-w-5xl text-center">
         <div className="mb-4 inline-flex items-center gap-3">
@@ -140,7 +143,8 @@ const Index = () => {
         <p className="tracking-widest text-muted-foreground opacity-60">v2.0.4</p>
         <p className="matrix-text">ATIVO</p>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 
