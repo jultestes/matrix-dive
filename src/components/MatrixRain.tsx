@@ -34,11 +34,11 @@ const MatrixRain = () => {
     }
 
     const draw = () => {
-      // Semi-transparent black to create fade effect
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      // Semi-transparent dark to create fade effect
+      ctx.fillStyle = 'rgba(8, 20, 18, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = '#00ff00';
+      ctx.fillStyle = '#00d97e';
       ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
@@ -47,17 +47,17 @@ const MatrixRain = () => {
         const x = i * fontSize;
         const y = drops[i] * fontSize;
 
-        // Brighter leading character
-        if (Math.random() > 0.5) {
-          ctx.fillStyle = '#ffffff';
+        // Brighter leading character - cyan-green tint
+        if (Math.random() > 0.6) {
+          ctx.fillStyle = '#7fffcc';
         } else {
-          ctx.fillStyle = `hsl(120, 100%, ${Math.random() * 30 + 40}%)`;
+          ctx.fillStyle = `hsl(155, 80%, ${Math.random() * 25 + 30}%)`;
         }
         
         ctx.fillText(char, x, y);
 
-        // Reset to green for next iteration
-        ctx.fillStyle = '#00ff00';
+        // Reset to cyan-green for next iteration
+        ctx.fillStyle = '#00d97e';
 
         // Reset drop when it falls off screen
         if (y > canvas.height && Math.random() > 0.975) {
@@ -80,7 +80,7 @@ const MatrixRain = () => {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 z-0"
-      style={{ background: '#000000' }}
+      style={{ background: '#0a1412' }}
     />
   );
 };
