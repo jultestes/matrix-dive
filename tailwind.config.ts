@@ -55,8 +55,8 @@ export default {
         },
       },
       fontFamily: {
-        mono: ["Share Tech Mono", "monospace"],
-        display: ["Orbitron", "sans-serif"],
+        mono: ["JetBrains Mono", "Space Mono", "monospace"],
+        display: ["Space Mono", "monospace"],
       },
       borderRadius: {
         lg: "var(--radius)",

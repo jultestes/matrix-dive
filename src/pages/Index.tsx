@@ -1,5 +1,5 @@
 import MatrixRain from '@/components/MatrixRain';
-import { Button } from '@/components/ui/button';
+import { Zap } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -9,81 +9,67 @@ const Index = () => {
 
       {/* Content Overlay */}
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4">
-        {/* Scanline effect overlay */}
-        <div 
-          className="pointer-events-none fixed inset-0 z-20"
-          style={{
-            background: 'repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 2px)',
-          }}
-        />
-
-        {/* Main Hero Content */}
-        <div className="text-center">
-          {/* Japanese subtitle */}
-          <p className="mb-4 text-sm tracking-[0.5em] text-matrix-dim animate-pulse-glow">
-            マトリックス・システム
-          </p>
-
-          {/* Main Title */}
-          <h1 className="mb-6 font-display text-5xl font-black uppercase tracking-wider text-foreground text-glow-intense md:text-7xl lg:text-8xl">
-            THE MATRIX
+        {/* Header */}
+        <div className="mb-12 flex items-center gap-3">
+          <Zap className="h-8 w-8 text-primary" />
+          <h1 className="font-display text-3xl font-bold tracking-[0.3em] text-primary text-glow md:text-4xl">
+            MATRIX FARM
           </h1>
+        </div>
 
-          {/* Subtitle with typing effect */}
-          <div className="mb-8 overflow-hidden">
-            <p className="font-mono text-lg text-matrix-glow md:text-xl">
-              ウェイクアップ、ネオ... // Wake up, Neo...
-            </p>
+        {/* Main Card */}
+        <div className="matrix-card w-full max-w-md">
+          {/* Card Header */}
+          <div className="mb-6 flex items-center gap-3">
+            <span className="text-2xl">🔐</span>
+            <h2 className="font-display text-lg tracking-[0.2em] text-primary">
+              ACESSO AO SISTEMA
+            </h2>
           </div>
 
-          {/* Japanese quote */}
-          <blockquote className="mx-auto mb-12 max-w-2xl border-l-2 border-primary pl-4 text-left">
-            <p className="text-sm text-muted-foreground md:text-base">
-              "現実とは何か？現実をどう定義するか？"
-            </p>
-            <p className="mt-2 text-xs text-matrix-dim">
-              "What is real? How do you define real?"
-            </p>
-            <footer className="mt-2 text-xs text-primary">— モーフィアス</footer>
-          </blockquote>
+          {/* Form */}
+          <div className="space-y-4">
+            <div className="relative">
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-lg">📧</span>
+              <input
+                type="email"
+                placeholder="seu@email.com"
+                className="matrix-input w-full pl-12"
+              />
+            </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <Button 
-              variant="matrix" 
-              size="lg"
-              className="glitch-effect"
-            >
-              赤い薬を飲む // Take the Red Pill
-            </Button>
-            <Button 
-              variant="matrixOutline" 
-              size="lg"
-            >
-              青い薬を飲む // Take the Blue Pill
-            </Button>
+            <div className="relative">
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-lg">🔑</span>
+              <input
+                type="password"
+                placeholder="••••••••"
+                className="matrix-input w-full pl-12"
+              />
+            </div>
+
+            <button className="matrix-button mt-2 flex w-full items-center justify-center gap-2">
+              <span>▶</span>
+              <span>CONECTAR</span>
+            </button>
           </div>
         </div>
 
-        {/* Bottom decoration */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-          <div className="flex flex-col items-center gap-2">
-            <p className="text-xs text-matrix-dim animate-pulse-glow">
-              スクロールして続ける
-            </p>
-            <div className="h-8 w-px bg-gradient-to-b from-primary to-transparent animate-float" />
-          </div>
+        {/* Bottom Info */}
+        <div className="mt-8 text-center">
+          <p className="text-sm text-muted-foreground">
+            システム v2.0 // Sistema seguro
+          </p>
         </div>
 
         {/* Corner decorations */}
-        <div className="fixed left-4 top-4 font-mono text-xs text-matrix-dim">
-          <p>SYS://MATRIX_v2.0</p>
-          <p className="text-primary">接続済み // CONNECTED</p>
+        <div className="fixed left-4 top-4 font-mono text-xs text-muted-foreground">
+          <p className="tracking-wider">SYS://NODE_01</p>
+          <p className="text-primary animate-pulse-soft">● ONLINE</p>
         </div>
 
-        <div className="fixed right-4 top-4 text-right font-mono text-xs text-matrix-dim">
-          <p>ノード: 東京-01</p>
-          <p className="text-primary">アクティブ // ACTIVE</p>
+        <div className="fixed right-4 top-4 text-right font-mono text-xs text-muted-foreground">
+          <p className="tracking-wider">東京サーバー</p>
+          <p className="text-primary animate-pulse-soft">接続済み</p>
         </div>
       </div>
     </div>
