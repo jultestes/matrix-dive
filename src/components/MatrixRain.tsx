@@ -32,11 +32,11 @@ const MatrixRain = () => {
 
     const draw = () => {
       // Very dark fade for subtle effect
-      ctx.fillStyle = 'rgba(2, 5, 10, 0.08)';
+      ctx.fillStyle = 'rgba(10, 2, 8, 0.08)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Very dim blue color
-      ctx.fillStyle = 'rgba(60, 130, 255, 0.08)';
+      // Very dim pink color
+      ctx.fillStyle = 'rgba(255, 50, 150, 0.08)';
       ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
@@ -66,7 +66,7 @@ const MatrixRain = () => {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 -z-10 pointer-events-none"
-      style={{ background: 'hsl(220, 40%, 2%)' }}
+      style={{ background: 'hsl(330, 40%, 2%)' }}
     />
   );
 };
