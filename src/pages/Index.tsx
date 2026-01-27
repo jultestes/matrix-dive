@@ -4,7 +4,7 @@ import MatrixRain from '@/components/MatrixRain';
 const plans = [
   {
     name: 'STARTER',
-    price: '2',
+    price: '1.000',
     period: '/mês',
     description: 'Ideal para iniciantes',
     features: [
