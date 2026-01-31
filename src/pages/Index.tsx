@@ -3,7 +3,7 @@ import MatrixRain from '@/components/MatrixRain';
 
 const plans = [
   {
-    name: 'STARTER',
+    name: 'LUCAS GAY',
     price: '1.000',
     period: '/mês',
     description: 'Ideal para iniciantes',
