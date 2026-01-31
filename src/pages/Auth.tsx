@@ -77,7 +77,7 @@ const Auth = () => {
                 <Terminal className="h-6 w-6 text-primary" />
               </div>
               <h1 className="matrix-text cursor-blink text-2xl font-bold tracking-widest md:text-3xl">
-                MATRIX FARM
+                LUCAS GAYZINHO
               </h1>
             </div>
             <p className="font-mono text-sm text-muted-foreground">
